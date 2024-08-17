@@ -1,0 +1,34 @@
+<html>
+  <head>
+    
+    <title>Your Personal Training App</title>
+    <style>
+      .container{width: 500px; clear: both;margin: auto;}
+      .container input{width: 100%;clear: both;}
+      h1 {text-align: center;}
+      p {text-align: center;}
+      div {text-align: center;}
+      form {text-align: center;}
+    </style>
+  </head>
+  
+<body>
+  <h1>Fill in your information</h1>
+ 
+<div class="container">
+<form method="POST", action="/recommend">
+    <p>Email Address: <input type="email" name="email_address"></p>
+    <p>Street Address: <input type="text" name="address"></p>
+    <p>          City: <input type="text" name="city"></p>
+    <p>           Zip:<input type="text" name="zip"></p>
+    <p>        Country:<input type="text" name="country"></p>
+    <p>        Date Of Birth:<input type="date" name="dob"></p>
+    <p>        Height:<input type="text" name="height"></p>
+    <p>        Weight:<input type="text" name="weight"></p>
+    <input type="submit">
+</form>
+</div>
+</body>
+
+
+</html>

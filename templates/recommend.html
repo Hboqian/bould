@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Your Personal Training App</title>
+    <style>
+      .container{width: 500px; clear: both;margin: auto;}
+      .container input{width: 100%;clear: both;}
+      h1 {text-align: center;}
+      p {text-align: center;margin: auto;}
+      div {text-align: center;}
+      form {text-align: center;}
+      table, th, td {text-align: center;margin: auto; margin-top:5%; border: 1px solid black;}
+    </style>
+  </head>
+  
+<body>
+  <h1>Recommended Training Program</h1>
+  <table>
+  <tr>
+  {% for h in header_arr %}
+    <th>
+      {{h}}    
+    </th>
+  {% endfor %}
+  </tr>
+  {% for row in data_arr %}
+  <tr>
+    {% for col in row %}
+      <td>
+        {{col}}
+      </td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+  </table>
+  <br>
+  <p>Rest for {{rest}} in between each Exercise</p>
+  <br>
+  
+  <form method = 'POST' action = '/complete'>
+    <input type = 'hidden' name ='r_id' value = {{routine_id}}>
+    <input type="submit" value="Review this Routine">
+  </form>
+</body>
+</html>

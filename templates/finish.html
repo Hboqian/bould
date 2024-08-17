@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Your Personal Training App</title>
+    <style>
+      .container{width: 500px; clear: both;margin: auto;}
+      .container input{width: 100%;clear: both;}
+      h1 {text-align: center;}
+      p {text-align: center;margin: auto;}
+      a {text-align: center;margin: auto;}
+      div {text-align: center;}
+      form {text-align: center;}
+      table, th, td {text-align: center;margin: auto; margin-top:5%; border: 1px solid black;}
+    </style>
+  </head>
+  
+<body>
+  <h1>Thank you for your review! Please select one of the following:</h1>
+  <br>
+  <br>
+  <br>
+  <form method="post" action="/customized">
+    <input type ='hidden' name ='r_id' value = {{o_r_id}}>
+    <input type="submit" value="Do it Again!">
+  </form>
+  <br>
+  <br>
+  <br>
+
+  <form method = 'POST' action = '/customized'>
+    <input type ='hidden' name ='r_id' value = {{r_id}}>
+    <input type="submit" value="Your New Customized Routine!">
+  </form>
+
+</body>
+</html>
